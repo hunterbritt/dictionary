@@ -97,6 +97,42 @@ body{
     display: none;
     transition: all 0.3s ease;
     /* overflow: hidden; */
-   
-    text-wrap: wrap;
+}
+
+.source-container .source {
+    max-width: 100%;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block; */
+    word-wrap: break-word;
+}
+
+
+.highlight {
+    /* display: inline-block; */
+    background: linear-gradient(90deg, transparent, rgb(255, 255, 255));
+    background-size: 200% 100%;
+    animation: highlighter 3000ms linear infinite;
+    /* color: #000; */
+    font-weight: bolder;
+}
+  
+@keyframes highlighter {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+    0% {
+        background-position: 200% 0%;
+    }
+    
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
 }
